@@ -1,0 +1,354 @@
+@import "../../App.scss";
+.features{
+    transform: translateY(-9.1rem);
+    width:76%;
+    margin:0 auto;
+    @include respond(tab-land){
+        width:82%;
+    }
+    @include respond(tab-port){
+        width:67%;
+    }
+    @include respond(phone){
+        width:85%;
+        transform: translateY(-5.1rem);
+    }
+    &__row1{
+        
+        width:100%;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(6.6666%, 1fr));
+        grid-template-rows: 250px;
+        grid-gap: 1.5rem;
+        @include respond(tab-land){
+            grid-template-rows:276px;
+        }
+        @include respond(tab-port){
+            grid-template-rows:220px 205px;
+        }
+        @include respond(phone){
+            grid-template-rows:220px 205px;
+        }
+        
+        &-img1{
+            background-image: url(../../../public/photography/web/furniture.png);
+            position: relative;
+            grid-column: 1 / 6;
+            transition: all .3s ease-in-out;
+            
+            &:hover{
+                box-shadow: 1px .8rem 18px -4px black;
+                transform: scale(1.03);
+            }
+            cursor:pointer;
+            @include respond(tab-land){
+                grid-column: 1 / 5;
+            }
+            &:hover figcaption{
+                backface-visibility: hidden;
+                opacity:1;
+            }
+
+            figcaption{
+                transition: all .4s ease-in-out;
+                position: absolute;
+                bottom:1rem;
+                left:1rem;
+                padding-left: .5rem;
+                border-left: 4px solid white;
+                opacity:0;
+                .title{
+                    font-size:2rem;
+                    font-weight: bold;
+                }
+                .text{
+                    font-size:1.3rem;
+                }
+                @include respond(tab-port){
+                    opacity:1;
+                }
+                @include respond(phone){
+                    opacity:1;
+                }
+            }
+
+            // out
+            @include respond(tab-port){
+                grid-column: 1 / -1;
+            }
+
+            @include respond(phone){
+                grid-column: 1 / -1;
+            }
+            
+        }
+            &-img2{
+                background-image: url(../../../public/photography/web/chameleon.png);  
+                
+                grid-column: 6 / 9;
+                transition: all .3s ease-in-out;
+                position: relative;
+                &:hover{
+                    box-shadow: 1px .8rem 18px -4px black;
+                    transform: scale(1.03);
+                }
+                cursor:pointer;
+                &:hover figcaption{
+                    backface-visibility: hidden;
+                    opacity:1;
+                    text-shadow: 2px 2px 6px black;
+                }
+    
+                figcaption{
+                    transition: all .4s ease-in-out;
+                    position: absolute;
+                    bottom:1rem;
+                    left:1rem;
+                    padding-left: .5rem;
+                    border-left: 4px solid white;
+                    opacity:0;
+                    .title{
+                        font-size:2rem;
+                        font-weight: bold;
+                    }
+                    .text{
+                        font-size:1.3rem;
+                    }
+                    @include respond(tab-port){
+                        opacity:1;
+                    }
+                    @include respond(phone){
+                        opacity:1;
+                    }
+                }
+                @include respond(tab-land){
+                    grid-column: 5 / 8;
+                }
+                @include respond(tab-port){
+                    grid-column: 1 / 6;
+                }
+    
+                @include respond(phone){
+                    grid-column: 1 / 6;
+                }
+            }
+            &-img3{
+                background-image: url(../../../public/photography/web/vase.png);
+                grid-column: 10 / -1 ;
+                transition: all .3s ease-in-out;
+                position: relative;
+            &:hover{
+                box-shadow: 1px .8rem 18px -4px black;
+                transform: scale(1.03);
+            }
+            cursor:pointer;
+
+
+            &:hover figcaption{
+                backface-visibility: hidden;
+                opacity:1;
+                text-shadow: 2px 2px 14px black;
+            }
+
+            figcaption{
+                transition: all .4s ease-in-out;
+                position: absolute;
+                bottom:1rem;
+                left:1rem;
+                padding-left: .5rem;
+                border-left: 4px solid white;
+                opacity:0;
+                .title{
+                    font-size:2rem;
+                    font-weight: bold;
+                }
+                .text{
+                    font-size:1.3rem;
+                }
+                @include respond(tab-port){
+                    opacity:1;
+                }
+                @include respond(phone){
+                    opacity:1;
+                }
+            }
+                @include respond(tab-port){
+                    grid-column: 6 / -1;
+                }
+                @include respond(phone){
+                    grid-column: 6 / -1;
+                }
+            }
+        
+    }
+
+
+    // second row of pictures
+    &__row2{
+        margin-top: 1.5rem;
+        width:100%;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(6.6666%, 1fr));
+        grid-template-rows: 250px;
+        grid-gap: 1.5rem;
+        
+        
+        @include respond(tab-land){
+            grid-template-rows:250px;
+        }
+        @include respond(tab-port){
+            grid-template-rows:220px 205px;
+        }
+        @include respond(phone){
+            grid-template-rows:220px 205px;
+        }
+        
+        &-img1{
+            background-image: url(../../../public/photography/web/flower.png);
+            grid-area: 1 / 7 / 2 /-1;
+            transition: all .3s ease-in-out;
+            position: relative;
+            &:hover{
+                box-shadow: 1px .8rem 18px -4px black;
+                transform: scale(1.03);
+            }
+            cursor:pointer;
+            &:hover figcaption{
+                backface-visibility: hidden;
+                opacity:1;
+            }
+
+            figcaption{
+                transition: all .4s ease-in-out;
+                position: absolute;
+                bottom:1rem;
+                left:1rem;
+                padding-left: .5rem;
+                border-left: 4px solid white;
+                opacity:0;
+                .title{
+                    font-size:2rem;
+                    font-weight: bold;
+                }
+                .text{
+                    font-size:1.3rem;
+                }
+                @include respond(tab-port){
+                    opacity:1
+                }
+                @include respond(phone){
+                    opacity:1
+                }
+            }
+            @include respond(tab-land){
+                grid-column: 8 / -1;
+            }
+            @include respond(tab-port){
+                grid-column: 1 / -1;
+            }
+
+            @include respond(phone){
+                grid-column: 1 / -1;
+            }
+            
+        }
+            &-img2{
+                background-image: url(../../../public/photography/web/skull.png);  
+                transition: all .3s ease-in-out;
+                position: relative;
+            &:hover{
+                box-shadow: 1px .8rem 18px -4px black;
+                transform: scale(1.03);
+            }
+                grid-column: 1 / 4;
+
+            cursor:pointer;
+            &:hover figcaption{
+                backface-visibility: hidden;
+                opacity:1;
+            }
+
+            figcaption{
+                transition: all .4s ease-in-out;
+                position: absolute;
+                bottom:1rem;
+                left:1rem;
+                padding-left: .5rem;
+                border-left: 4px solid white;
+                opacity:0;
+                .title{
+                    font-size:2rem;
+                    font-weight: bold;
+                }
+                .text{
+                    font-size:1.3rem;
+                }
+                @include respond(tab-port){
+                    opacity:1
+                }
+                @include respond(phone){
+                    opacity:1
+                }
+            }
+
+                @include respond(tab-land){
+                    grid-column: 1 / 4;
+                }
+                @include respond(tab-port){
+                    grid-column: 1 / 6;
+                }
+    
+                @include respond(phone){
+                    grid-column: 1 / 6;
+                }
+            }
+            &-img3{
+                background-image: url(../../../public/photography/web/house.png);
+                transition: all .3s ease-in-out;
+                position: relative;
+                &:hover figcaption{
+                    backface-visibility: hidden;
+                    opacity:1;
+                    text-shadow: 2px 2px 9px black;
+                }
+    
+                figcaption{
+                    transition: all .4s ease-in-out;
+                    position: absolute;
+                    bottom:1rem;
+                    left:1rem;
+                    padding-left: .5rem;
+                    border-left: 4px solid white;
+                    opacity:0;
+                    .title{
+                        font-size:2rem;
+                        font-weight: bold;
+                    }
+                    .text{
+                        font-size:1.3rem;
+                    }
+                    @include respond(tab-port){
+                        opacity:1
+                    }
+                    @include respond(phone){
+                        opacity:1
+                    }
+                }
+            &:hover{
+                box-shadow: 1px .8rem 18px -4px black;
+                transform: scale(1.03);
+            }
+                grid-column: 4 / 7;
+                @include respond(tab-port){
+                    grid-column: 4 / 8;
+                }
+                @include respond(tab-port){
+                    grid-column: 6 / -1;
+                }
+                @include respond(phone){
+                    grid-column: 6 / -1;
+                }
+            }
+        
+    }
+}

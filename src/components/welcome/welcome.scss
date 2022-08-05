@@ -1,0 +1,114 @@
+@import "../../App.scss";
+@import "../../sass/_button.scss";
+.welcome{
+    width:76%;
+    margin:0 auto;
+    @include respond(tab-land){
+        width:82%;
+    }
+    @include respond(tab-port){
+        width:67%;
+    }
+    @include respond(phone){
+        width:85%;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap:1.5rem;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+
+
+    // left section of welcom
+
+    &__left{
+        display: grid;
+        text-align: center;
+        text-align-last: center;
+        justify-items: center;
+        align-content: center;
+        &--title{
+            font-size:3.9rem;
+            font-family: Tono;
+            color:$title_color;
+        }
+        &--text{
+            margin: 3.7rem 0 2.7rem 0;
+            font-size:1.3rem;
+            color:$text_color;
+
+            @include respond(phone){
+                font-size:1.1rem;
+                line-height: 2rem;
+            }
+        }
+        
+    }
+
+    // right of the welcome section
+
+    &__right{
+        width:100%;
+        .imageContainer{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            @include respond(tab-land){
+                margin-top: 5.6rem;
+                // transform: translateX(-1rem);
+            }
+            @include respond(tab-port){
+                margin-top: 5.6rem;
+                // transform: translateX(-1rem);
+            }
+            @include respond(phone){
+                margin-top: 5.6rem;
+                // transform: translateX(-1rem);
+            }
+            &--img1{
+                background-image: url(../../../public/photography/web/chameleon.png);
+                width:27.2rem;
+                height: 19.8rem;
+                object-fit: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: 3;
+                transform: translateX(9.1rem) translateY(4rem);
+                transition: all .65s cubic-bezier(0.4, 0, 1, 1);
+                @include respond(phone){
+                    transform: translateX(9.1rem) translateY(4rem) scale(1.1);
+                    box-shadow: 8px 8px 12px $background_color;
+                }
+                &:hover{
+                    transform: translateX(9.1rem) translateY(4rem) scale(1.1);
+                    box-shadow: 8px 8px 12px $background_color;
+                    border-radius: 6px;
+                }
+            }
+            &--img2{
+                right:0;
+                bottom:0;
+                background-image: url(../../../public/photography/web/feather.png);
+                width:23.5rem;
+                height: 43.9rem;
+                object-fit: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all .65s cubic-bezier(0.4, 0, 1, 1);
+                &:hover{
+                    transform:scale(1.05);
+                    z-index:4;
+                    box-shadow:-3px 8px 17px  $background_color;
+                    border-radius: 6px;
+
+                    @include respond(phone){
+                        transform: none;
+                        z-index:2;
+                    }
+                }
+            }
+        }
+    }
+}

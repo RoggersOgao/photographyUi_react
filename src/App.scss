@@ -1,0 +1,49 @@
+$text_color:#FFF3DC;
+$title_color:#FED2A6;
+$border_color:#707070;
+$red:#F20F26;
+$blue:#0008FF;
+$purple:#AB00FF;
+$background_color:#0E0E0E;
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+html{
+    font-size:62.5%; 
+}
+body{
+    box-sizing: border-box;
+    background-color:$background_color;
+    font-family: 'Spline Sans', sans-serif;
+    // font-family: 'Tinos', serif;
+    color:$text_color;
+}
+
+@mixin respond ($breakpoint){
+	
+  @if $breakpoint == phone{
+      @media only screen and (max-width:600px){
+          @content
+      }
+  }
+  @if $breakpoint == tab-port{
+      @media only screen and (max-width:900px){
+          @content
+      }
+  }
+  @if $breakpoint == tab-land{
+      @media only screen and (max-width:1200px){
+          @content
+      }
+  }
+  @if $breakpoint == big-desktop{
+      @media only screen and (max-width:1800px){
+          @content
+      }
+  }
+}

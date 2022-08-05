@@ -1,0 +1,92 @@
+@import "../../App.scss";
+.title{
+    font-size:3.9rem;
+    font-family: Tono;
+    text-align: center;
+    color:$title_color;
+    margin: 4rem 0;
+    text-transform: uppercase;
+}
+.contact{
+    width:90%;
+    margin:0 auto;
+display: grid;
+align-items: center;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-gap: 1.5rem;
+margin-bottom: 3rem;
+    &__left{
+        &--img{
+            background-image: url(../../../public/photography/web/shaking-hands-g7819bc10b_1920.png);
+            width:100%;
+            height: 70vh;
+            object-fit: cover;
+            background-position: center;
+            @include respond(tab-port){
+                height: 40rem;
+                transform: scale(1);
+            }
+            @include respond(phone){
+                display:none;
+            }
+
+        }
+    }
+    &__right{
+        width:100%;
+        &--form{
+            width:95%;
+            margin:0 auto;
+            @include respond(phone){
+                width:90%;
+            }
+            .contactForm{
+                
+                .form-group{
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        font-size:1.2rem;
+                        padding:1.4rem 0;
+                        color:$border_color
+                    }
+                    input{
+                        width:100%;
+                        padding:1.2rem;
+                        background-color: transparent;
+                        border:.3px solid $border_color;
+                        transition: all .4s ease-in-out;
+                        border-bottom:2px solid $border_color;
+                        color:white;
+                        &:active, &:focus{
+                            outline:none;
+                            border-bottom: 2px solid green;
+                        }
+                    }
+                    textarea{
+                        width:100%;
+                        background-color: transparent;
+                        border:.3px solid $border_color;
+                        color:white;
+                        padding:1rem;
+                        &:active, &:focus{
+                            outline:none;
+                            border-bottom: 2px solid green;
+                        }
+                    }
+                }
+
+                .button{
+                    width:10%;
+                    font-size:1.3rem;
+                    margin:0 auto;
+                    margin-top: 3rem;
+                    border:none;
+                    color:white;
+                    padding:1rem 6rem;
+                }
+            }
+        }
+    }
+
+}

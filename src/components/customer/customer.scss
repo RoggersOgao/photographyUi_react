@@ -1,0 +1,101 @@
+@import "../../App.scss";
+
+
+.customer{
+    width:76%;
+    margin:6rem auto;
+    
+    @include respond(tab-land){
+        width:82%;
+    }
+    @include respond(tab-port){
+        width:67%;
+    }
+    @include respond(phone){
+        width:85%;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap:1.5rem;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+
+
+    // left section of welcom
+
+    &__left{
+        display: grid;
+        text-align: center;
+        text-align-last: center;
+        justify-items: center;
+        align-content: center;
+        &--title{
+            font-size:3.9rem;
+            font-family: Tono;
+            color:$title_color;
+        }
+        &--text{
+            margin: 3.7rem 0 2.7rem 0;
+            font-size:1.3rem;
+            color:$text_color;
+            text-align: center;
+        text-align-last: center;
+        }
+
+        &--name{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: end;
+            border-bottom: .3px solid $border_color;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            .name{
+                font-size:1.3rem;
+                padding:.7rem;
+            }
+            .date{
+                color:rgb(104, 104, 104);
+            }
+        }
+        
+    }
+
+    // right of the customer section
+
+    &__right{
+        width:100%;
+        .imageContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include respond(tab-land){
+                margin-top: 1.6rem;
+                // transform: translateX(-1rem);
+            }
+            @include respond(tab-port){
+                margin-top: 1.6rem;
+                // transform: translateX(-1rem);
+            }
+            @include respond(phone){
+                margin-top: 1.6rem;
+                // transform: translateX(-1rem);
+            }
+            &--img1{
+                background-image: url(../../../public/photography/web/people-4050698.png);
+                width:46.4rem;
+                height: 46.9rem;
+                object-fit: cover;
+                border: 1px dashed $border_color;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include respond(phone){
+                    background-image: url(../../../public/photography/mobile/people-4050698.png);
+                }
+            }
+        }
+    }
+}

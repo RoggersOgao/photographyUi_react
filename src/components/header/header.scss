@@ -1,0 +1,145 @@
+@import "../../App.scss";
+.header{
+    background-image: url(../../../public/photography/web/headerlg.png);
+    max-width:100%;
+    height:800px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    @include respond(tab-port){
+       background-position: top center;
+    }
+    @include respond(phone){
+        background-image: url(../../../public/photography/mobile/headersm.png);
+    }
+    &__top{
+        height: 4.5rem;
+        border-bottom: .3px solid $border_color;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        &-icons{
+            display: flex;
+            gap:2rem;
+            align-items: center;
+            margin-right: 7rem;
+
+            &:hover{
+                cursor:pointer;
+                color:blue;
+            }
+        }
+        
+    }
+    &__bottom{
+        &-logo{
+            display: flex;
+            align-items: center;
+            gap:2rem;
+            margin:1.5rem 2rem 0 2rem;
+            cursor:pointer;
+            .text{
+                font-size:1.8rem;
+                font-family: Tono;
+                letter-spacing: 2px;
+            }
+        }
+        &-text{
+            .textSection{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 4rem;
+                @include respond(phone){
+                    margin-top:7.1rem;
+                }
+                &__logo{
+                    &-img{
+                        background-image: url(../../../public/photography/web/logowlg.png);
+                        width:15.6rem;
+                        height: 15.6rem;
+
+                        @include respond (phone){
+                            background-image: url(../../../public/photography/mobile/mobileBlogo.png);
+                            width:21.2rem;
+                            height: 21.2rem;
+                        }
+                    }
+                }
+
+                &__title{
+                    margin-top: 2.5rem;
+                    font-size: 7.8rem;
+                    letter-spacing: 6px;
+                    font-family: Tono;
+                    color:$title_color;
+                    @include respond (tab-land){
+                        font-size:6.5rem;
+                    }
+                    @include respond (tab-port){
+                        font-size:5.5rem;
+                    }
+                    @include respond (phone){
+                        font-size:4.1rem;
+                    }
+                }
+
+                
+                &__text{
+                    font-size:1.3rem;
+                    width:41%;
+                    text-align: justify;
+                    margin-top: 2.5rem;
+                    text-align-last: center;
+                    text-rendering: geometricPrecision;
+                    @include respond(tab-land){
+                        width:60%;
+                        text-align:justify;
+                    }
+                    @include respond(tab-port){
+                        width:64%;
+                        text-align:justify;
+                    }
+                    @include respond(phone){
+                        margin-top: 4rem;
+                        width:85%;
+                        font-size:1.1rem;
+                        line-height: 2rem;
+                        text-align:center;
+                    }
+                }
+
+                &__button{
+                    button{
+                    font-size:1.2rem;
+                    font-family: Tono;
+                    padding:1.5rem 9rem;
+                    margin-top: 4.8rem;
+                    background-color: transparent;
+                    border:1px solid $border_color;
+                    color:$text_color;
+
+                        transition: all .5s ease-in-out;
+                    @include respond(phone){
+                        margin-top: 6rem;
+                        background:linear-gradient(to right, rgb(165, 119, 19), purple,rgb(10, 121, 144));
+                        border:none;
+                        
+                    }
+
+                    &:hover{
+                        background-color: white;
+                        color:$background_color;
+
+                        @include respond(phone){
+                            color:white;
+                            
+                        }
+                    }
+
+                    }
+                }
+
+            }
+        }
+    }
+}
